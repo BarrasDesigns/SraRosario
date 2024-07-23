@@ -13,6 +13,7 @@ const playerDuration = document.querySelector("#player-duration");
 const playerProgress = document.querySelector("#player-progress");
 const audioPlayer = document.querySelector("#audio-player");
 
+
 let currentSong = 0;
 let repeatSong = false;
 
@@ -20,7 +21,7 @@ const songs = [
     {
         name: "Mi recuerdo",
         author: "Sra. Rosario",
-        path: "./Audio2.mp3",
+        path: "./AudioSraRosario.mp3",
     }
     //   {
     //     name: "Jazzy Abstract Beat",
@@ -52,6 +53,21 @@ playerVolume.addEventListener("input", () => changeVolume());
 playerProgress.addEventListener("input", () => changeTime());
 audioPlayer.addEventListener("timeupdate", () => timeUpdate());
 audioPlayer.addEventListener("ended", () => ended());
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const CancionFondo = document.querySelector("#CancionFondo");
+
+    const BackgroundSong = () => {
+        CancionFondo.play().catch(error => {
+            console.log("Reproduccion automatica no permitida.")
+        })
+    }
+
+    BackgroundSong();
+})
+
+
 
 const togglePlaySong = () => {
     if (audioPlayer.paused) {
