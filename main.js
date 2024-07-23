@@ -20,7 +20,7 @@ const songs = [
     {
         name: "Mi recuerdo",
         author: "Sra. Rosario",
-        path: "./audio.mp3",
+        path: "./Audio2.mp3",
     }
     //   {
     //     name: "Jazzy Abstract Beat",
