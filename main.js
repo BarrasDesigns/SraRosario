@@ -56,10 +56,10 @@ audioPlayer.addEventListener("ended", () => ended());
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const CancionFondo = document.querySelector("#CancionFondo");
+    const Song= document.querySelector("#CancionFondo");
 
     const BackgroundSong = () => {
-        CancionFondo.play().catch(error => {
+        Song.play().catch(error => {
             console.log("Reproduccion automatica no permitida.")
         })
     }
